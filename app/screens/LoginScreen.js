@@ -34,7 +34,7 @@ export default function LoginScreen({ navigation }) {
     <Background>
       <BackButton goBack={navigation.goBack} />
       <Logo />
-      <Header>Hello.</Header>
+      <Header>Bem-vindo!</Header>
       <TextInput
         label="Email"
         returnKeyType="next"
@@ -48,7 +48,7 @@ export default function LoginScreen({ navigation }) {
         keyboardType="email-address"
       />
       <TextInput
-        label="Password"
+        label="Palavra-passe"
         returnKeyType="done"
         value={password.value}
         onChangeText={(text) => setPassword({ value: text, error: "" })}
@@ -60,18 +60,18 @@ export default function LoginScreen({ navigation }) {
         <TouchableOpacity
           onPress={() => navigation.navigate("ResetPasswordScreen")}
         >
-          <Text style={styles.forgot}>Forgot your password ?</Text>
+          <Text style={styles.forgot}>Esqueceu a sua palavra-passe?</Text>
         </TouchableOpacity>
       </View>
       <Button mode="contained" onPress={onLoginPressed}>
-        Log in
+        Entrar
       </Button>
       <View style={styles.row}>
-        <Text>You do not have an account yet ?</Text>
+        <Text>Ainda não tem uma conta?</Text>
       </View>
       <View style={styles.row}>
         <TouchableOpacity onPress={() => navigation.replace("RegisterScreen")}>
-          <Text style={styles.link}>Create !</Text>
+          <Text style={styles.link}>Criar!</Text>
         </TouchableOpacity>
       </View>
     </Background>

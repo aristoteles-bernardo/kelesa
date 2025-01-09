@@ -38,9 +38,9 @@ export default function RegisterScreen({ navigation }) {
     <Background>
       <BackButton goBack={navigation.goBack} />
       <Logo />
-      <Header>Welcome.</Header>
+      <Header>Bem-vindo!</Header>
       <TextInput
-        label="Name"
+        label="Nome"
         returnKeyType="next"
         value={name.value}
         onChangeText={(text) => setName({ value: text, error: "" })}
@@ -60,7 +60,7 @@ export default function RegisterScreen({ navigation }) {
         keyboardType="email-address"
       />
       <TextInput
-        label="Password"
+        label="Palavra-passe"
         returnKeyType="done"
         value={password.value}
         onChangeText={(text) => setPassword({ value: text, error: "" })}
@@ -73,14 +73,14 @@ export default function RegisterScreen({ navigation }) {
         onPress={onSignUpPressed}
         style={{ marginTop: 24 }}
       >
-        Next
+        Próximo
       </Button>
       <View style={styles.row}>
-        <Text>I already have an account !</Text>
+        <Text>Já tenho uma conta!</Text>
       </View>
       <View style={styles.row}>
         <TouchableOpacity onPress={() => navigation.replace("LoginScreen")}>
-          <Text style={styles.link}>Log in</Text>
+          <Text style={styles.link}>Entrar</Text>
         </TouchableOpacity>
       </View>
     </Background>
